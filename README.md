@@ -33,10 +33,16 @@ This project aims to preprocess, analyze, and visualize the real estate property
   ```
 
 - **Casting Id column to string**
+  
   IDs are often arbitrary identifiers, not numerical values meant for calculations. Treating IDs as strings allows us to perform categorical operations like grouping data by ID, counting unique IDs,etc. Converting ID columns to strings ensures that they are treated as labels rather than numerical values.
   
 - **Resolving the col_name issue**
+  
   When we try to convert `id` column to string we encounter an error. (Pandas doesn't recognize it as a valid column name). Upon investigating we found an encoding issue with an unnecessary byte order mart(BOM) attached to the column name. The solution for this is, we rename the column, effectively discarding the irrelevant metadata
+
+  <p align='center>
+    <img src='![image](https://github.com/user-attachments/assets/a34df458-7e3c-414a-956b-bea92aa31091)
+</p>
   
 - **Changing the dtype of building and property# columns**
 - **Dealing with date_sale column**
