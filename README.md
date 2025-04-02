@@ -4,15 +4,15 @@
 The real estate market is a complex and dynamic entity of great intrest for professionals in the field, investors, policymakers, and data analysts that wish to thorougly undersand the market conditions and customer behaviour and make informed decisions. In our Real Estate Market Analysis with Python project, the client-a leading company in the industry-has collected data on properties and their customers and wishes to gain indights with real estate analysis
 
 ## Table of Contents
-- [Project Objective](Project-Objective)
-- [Data Preprocessing](Data-Preprocessing)
-  - [Data Cleaning and Preprocessing (Properties Dataset)](Data-Cleaning-and-Preprocessing (Properties Dataset))
-  - [Data Cleaning and Preprocessing (Customers Dataset)](Data-Cleaning-and-Preprocessing (Customers Dataset))
-  - [Combining the Two Datasets](Combining-the-Two-Datasets)
-- [Descriptive Statistics](Descriptive-Statistics)
-- [Data Analysis](Data-Analysis)
-- [Data Visualization](Data-Visualization)
-- [Data Interpretation](Data-Interpretation)
+- [Project Objective](#Project-Objective)
+- [Data Preprocessing](#Data-Preprocessing)
+  - [Data Cleaning and Preprocessing (Properties Dataset)](#Data-Cleaning-and-Preprocessing (Properties Dataset))
+  - [Data Cleaning and Preprocessing (Customers Dataset)](#Data-Cleaning-and-Preprocessing (Customers Dataset))
+  - [Combining the Two Datasets](#Combining-the-Two-Datasets)
+- [Descriptive Statistics](#Descriptive-Statistics)
+- [Data Analysis](#Data-Analysis)
+- [Data Visualization](#Data-Visualization)
+- [Data Interpretation](#Data-Interpretation)
 
 
 ## Project Objective
