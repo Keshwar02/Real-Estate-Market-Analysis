@@ -40,8 +40,8 @@ This project aims to preprocess, analyze, and visualize the real estate property
   
   When we try to convert `id` column to string we encounter an error. (Pandas doesn't recognize it as a valid column name). Upon investigating we found an encoding issue with an unnecessary byte order mark(BOM) attached to the column name. The solution for this is, we rename the column, effectively discarding the irrelevant metadata
 
-  <p>
-    <img src=''>
+  <p align='center'>
+    <img src='Images/Img1.png'>
   </p>
 
   ```python
@@ -69,8 +69,8 @@ This project aims to preprocess, analyze, and visualize the real estate property
   - Finally map values to 1's and 0's
   
 - **Checking for missing values and Dealing with them if necessary**
-  <p>
-    <img src=''>
+  <p align='center'>
+    <img src='Images/Img2.png'>
   </p>
 
   Here we can see that `cusotmerid` and `date_sale` columns have 72 Na values. But we don't have to deal with them and leave them as they are they indicate that purchase is not done(unsold). So we don't have to change them
@@ -82,8 +82,8 @@ This project aims to preprocess, analyze, and visualize the real estate property
   ```
   
 - **Inspecting column names and dealing with them if necessary**
-  <p>
-    <img src=''>
+  <p align='center'>
+    <img src='Images/Img3.png'>
   </p>
   
 - **Renaming the entity column and mapping values to 1's and 0's**
@@ -113,26 +113,23 @@ We are done with Cleaning and Preprocessing both of our tables. We can move forw
    Initial step is to visually inspect the top five rows of each dataset. Specifically, `customer_ID` feature in both tables as we are going to merge these two datasets on 'customerid` column
    
 2. **Mergeing 2 tables**
-  <p>
-    <img src=''>
+  <p align='center'>
+    <img src='Images/Img4.png'>
   </p>
 
 We can see that the merge did not work as intended. The problem might be with the key, let's look into it
    
 3. **Identifying and Resolving merge issues**
    <p>
-     <img src=''>
-   </p>
-   <p>
-     <img src=''>
+     <img src='Images/Img5.png'>
    </p>
 
    - It's apparent that the two datasets differ - there are unexpected and unnecessary spaces
    - Let's trim the unncessary white space from `customerid` in the properties dataframe
    
 4. **Final checks and merge**
-   <p>
-     <img src=''>
+   <p align='center'>
+     <img src='Images/Img8.png'>
    </p>
 
    Now, we can see that the merge is performed as intended
@@ -151,8 +148,8 @@ We can see that the merge did not work as intended. The problem might be with th
 
 
 ## Descriptive Statistics
-<p>
-  <img src=''>
+<p align='center'>
+  <img src='Images/Img8.png'>
 </p>
 
 #### Breakdown by Building
@@ -165,24 +162,26 @@ We observe that the `building` column has five unique values
   - We group the data for all cases in similar manner just with few changes(i.e., columns of intrest and the operation we want to perform)
 
   <p>
-    <img src=''>
+    <img src='Images/Img9.png'>
   </p>
   
 - Breakdown of averages by building
   <p>
-    <img src=''>
+    <img src='Images/Img10.png'>
   </p>
   
 #### Breakdown by Country
 - Breakdown of totals by Country (frequency distribution by Country)
-  - Here there is a small issue we need to address before grouping data
+  
+  Here there is a small issue we need to address before grouping data(i.e., We have 2 USA values one has a leading empty space in it which we need to deal with it 
+ first)
   <p>
-    <img src=''>
+    <img src='Images/Img12.png'>
   </p>
   
 - Breakdown of averages by Country
   <p>
-    <img src=''>
+    <img src='Images/Img13.png'>
   </p>
   
 #### Breakdown by State
@@ -191,7 +190,7 @@ We observe that the `building` column has five unique values
 - Cumulative frequency by State
 
   <p>
-    <img src=''>
+    <img src='Images/Img14.png'>
   </p>
   
 ## Data Analysis
@@ -207,8 +206,8 @@ data['age_interval'] = pd.cut(data['age_at_purchase'],bins=10,precision=0)
 ```
 - and group data by `age_interval`
 
-<p>
-  <img src=''>
+<p align='center'>
+  <img src='Images/Img15.png'>
 </p>
  
 #### Analysis of the price of properties
@@ -220,8 +219,8 @@ data['price_interval'] = pd.cut(data['price$'],bins=10)
 - Next, we see the number of sold properties per price interval
 - also, check the number of unsold properties
 
-<p>
-  <img src=''>
+<p align='center'>
+  <img src='Images/Img16.png'>
 </p>
 
 #### Relationship between age and price
@@ -230,8 +229,8 @@ To analyze the relationship between customer age and property prices, we first f
 - Then calculate the covariance between age and price using the NumPy `.cov()` function
 - Covariance doesn't provide an intuitively understandable value, so we also calculate `np.corrcoef(col_1,col_2)` or `data[[col_1,col_2]].corr()`
 
-<p>
-  <img src=''>
+<p align='center'>
+  <img src='Images/Img17.png'>
 </p>
 
 
@@ -239,38 +238,38 @@ To analyze the relationship between customer age and property prices, we first f
 
 Having done all the necessary data preparation and statistical analysis, we will now create the required visualizations to furthur understand and analyze the data
 
-#### Deal satisfaction by Country (Bar Chart)
+#### 1. Deal satisfaction by Country (Bar Chart)
 
 To plot the deal satisfaction by country, we need data showing a breakdown of deal satisfaction by country.
 
-<p>
-  <img src=''>
+<p align='center'>
+  <img src='Images/Img18.png'>
 </p>
 
-#### Age Distribution (Histogram)
+#### 2. Age Distribution (Histogram)
 
 To plot the age distribution, we need the age variable we created
 
-<p>
-  <img src=''>
+<p align='center'>
+  <img src='Images/Img19.png'>
 </p>
 
-#### Segmentation by State (Pareto Chart)
+#### 3. Segmentation by State (Pareto Chart)
 
 For this visualization, we should display the relative and cumulative frequency of sold properties by state
 
-<p>
-  <img src=''>
+<p align='center'>
+  <img src='Images/Img20.png'>
 </p>
 
-#### Total sales per year (Line Chart)
+#### 4. Total sales per year (Line Chart)
 
 Revenue in Million
-<p>
-  <img src=''>
+<p align='center'>
+  <img src='Images/Img21.png'>
 </p>
 
-#### Yearly sales distribution across buildings (Stacked Area Chart)
+#### 5. Yearly sales distribution across buildings (Stacked Area Chart)
 
 To plot the total number of sales per year and building, we must 
 1. Initialize a checkpoint dataframe
@@ -280,53 +279,53 @@ To plot the total number of sales per year and building, we must
 5. Generate a yearly breakdown
 6. Create stacked area chart
 
-<p>
-  <img src=''>
+<p align='center'>
+  <img src='Images/Img22.png'>
 </p>
 
 ## Data Interpretation 
 
 After preprocessing, analyzing, and visualizing data. We can draw following conclusions/insights
 
-#### Customer Profile
+### 1. Customer Profile
 
 Customer profile allow real estate owners and developers to look for the perfect buyers
-<p>
-  <img src=''>
+<p align='center'>
+  <img src='Images/Img23.png'>
 </p>
 
 - We can note that the age which most customers purchase a home is between 31 and 42 - more precisely, the 36-42 bracket, closely foloowed by 31 to 26
 - Now, the real estate firm can create an ideal buyer profile to discover customers whose characteristics align with those of their ideal persona. They can then target the specific cluster of people through ads on YouTube, Google, Facebook, or similar marketplaces.
 
-#### Building Characteristics 
-- Breakdown by Building
+### 2. Building Characteristics 
+#### **Breakdown by Building**
   
   Based on our analysis, we conclude that the most sold buildings are types 2 and 3
   <p>
-    <img src=''>
+    <img src='Images/Img24.png'>
   </p>
   
   However, when we examine the average price and deal satisfaction, we motice something else
   <p>
-    <img src=''>
+    <img src='Images/Img25.png'>
   </p>
   
   - Type 4 has the highest average property sale prices at 290,000USD. Types 2 and 3 are close behind. Going back to the buildings in type 4, we see that the average deal satisfaction is also highest-close to 3.9
   - Type 4 is also the highest in terms of area
   - It is likely that the buildings in type 4 have more luxurious or spacious apartments. The totals show that these kinds of properties don’t sell as often as others. They are also more expensive due to their size, as buildings are sold per square meter. Customers are more likely to buy smaller and less expensive building types, as indicated by the trends in our dataset.Real estate developers can consider this information when devising their strategies. One option is to rely on more standard building types, such as 2 and 3, and sell more buildings at a more average price. Alternatively, they can invest in a few more luxurious apartments and sell them at a higher price, thus creating a higher deal satisfaction.
     
-- Sales by Country
+#### **Sales by Country**
 
   Looking at the geographical data, we notice that 90% of the sales come from the United States
 
   <p>
-    <img src=''>
+    <img src='Images/Img26.png'>
   </p>
   
-- Total Number of Sales per Year by Building
+#### **Total Number of Sales per Year by Building**
 
   We observe that 2007 is by far the most popular year for sales. Based on historical events, this comes as no surprise as it happened right before the market crash in the States
 
-  <p>
-    <img src=''>
+  <p align='center'>
+    <img src='Images/Img27.png'>
   </p>
