@@ -6,9 +6,9 @@ The real estate market is a complex and dynamic entity of great intrest for prof
 ## Table of Contents
 - [Project Objective](#Project-Objective)
 - [Data Preprocessing](#Data-Preprocessing)
-  - [Data Cleaning and Preprocessing (Properties Dataset)](##Data-Cleaning-and-Preprocessing (Properties Dataset))
-  - [Data Cleaning and Preprocessing (Customers Dataset)](##Data-Cleaning-and-Preprocessing (Customers Dataset))
-  - [Combining the Two Datasets](##Combining-the-Two-Datasets)
+  - [Cleaning and Preprocessing Properties Dataset](#Cleaning-and-Preprocessing-Properties-Dataset)
+  - [Cleaning and Preprocessing Customers Dataset](#Cleaning-and-Preprocessing-Customers-Dataset)
+  - [Combining the Two Datasets](#Combining-the-Two-Datasets)
 - [Descriptive Statistics](#Descriptive-Statistics)
 - [Data Analysis](#Data-Analysis)
 - [Data Visualization](#Data-Visualization)
@@ -24,7 +24,7 @@ This project aims to preprocess, analyze, and visualize the real estate property
 3. Data Cleaning
 4. Combining two datasets
 
-### Data Cleaning and Preprocessing (Properties Dataset)
+### Cleaning and Preprocessing Properties Dataset
 - **Create a Copy of the Original Dataset**
   
   Creating a new variable that replicates the original data acts as a natural 'checkpoint' in our data processing. This ensures that we always have access to pristine data if we need to revert our changes indicating that it holds a safeguard copy of the original data
@@ -75,7 +75,7 @@ This project aims to preprocess, analyze, and visualize the real estate property
 
   Here we can see that `cusotmerid` and `date_sale` columns have 72 Na values. But we don't have to deal with them and leave them as they are they indicate that purchase is not done(unsold). So we don't have to change them
   
-### Data Cleaning and Preprocessing (Customers Dataset)
+### Cleaning and Preprocessing Customers Dataset
 - **Create a Copy of the Original Dataset**
   ```python
   customers = cust_df.copy()
